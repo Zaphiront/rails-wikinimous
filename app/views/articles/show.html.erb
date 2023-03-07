@@ -1,0 +1,8 @@
+<h1>Display Article</h1>
+<ul>
+<li><%= @article[:title] %></li>
+<li><%= @article[:content] %></li>
+</ul>
+<h2><%= link_to "Return to Article List", articles_path %></h2>
+<h2><%= link_to "Edit Article", edit_path %></h2>
+<h2><%= link_to "Delete Article?", article_path(@article),data: {turbo_method: :delete, turbo_confirm: "Are you sure?"} %></h2>
